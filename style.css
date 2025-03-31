@@ -125,7 +125,7 @@
     color: #0d6efd !important;
 }
 
-.bg-dropdown{
+.bg-dropdown {
     background-color: rgba(0, 0, 0, 0.127);
 }
 
@@ -169,26 +169,30 @@
     background-image: url(assets/image/PNGs/PREFEITURA\ DE\ IPIRÁ\ -\ Site-04.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    padding: 0px 0;
 }
 
-.card-img-custom {
-    width: 100%;
-    height: 230px;
-    object-fit: cover;
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 colunas no desktop */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
 }
 
-.card {
-    background-color: transparent;
+.card-custom {
+    background: transparent;
     border: none;
     transition: transform 0.3s ease;
 }
 
-.card:hover {
-    transform: translateY(-5px);
-}
-
-.w-13 {
-    width: 13rem !important;
+.card-custom img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
 }
 
 /*  Ação social */
@@ -203,7 +207,7 @@
 }
 
 /* Serviços */
-.card-service { 
+.card-service {
     transition: transform 0.3s ease;
 }
 
@@ -237,11 +241,13 @@
     /* Barra de pesquisa */
     .search-aligned-container {
         justify-content: flex-end;
+
     }
 
     .search-input-group {
         width: 100%;
         max-width: 252px;
+        padding: 0px 10px ;
     }
 
     .search-input {
@@ -304,18 +310,21 @@
     /* Cards */
 
     .section-card-container {
-        background-image: url(assets/image/PNGs/PREFEITURA\ DE\ IPIRÁ\ -\ Site-04.png);
-        background-repeat: no-repeat;
-        background-size: 90% 118%;
-        background-position: center center;
-
+        background-size: 100% 120%;
+        background-position: center;
+        padding: 30px 0;
+        margin: 40px 0px;
     }
 
-    .card-img-custom {
-        width: 90%;
-        height: 200px;
-        object-fit: cover;
-        justify-content: center;
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 colunas em mobile/tablet */
+        gap: 15px;
+    }
+
+    .card-custom img {
+        height: 150px;
+        /* Altura menor para mobile */
     }
 
     /* Ação social */
@@ -367,4 +376,3 @@
         margin-left: 0;
     }
 }
-
