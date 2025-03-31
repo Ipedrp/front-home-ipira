@@ -1,0 +1,370 @@
+:root {
+    --primary-color-bold: #0f4ca8;
+    --secondary-color: #0d6efd;
+    --white: #ffffff;
+    --black: #000000b8;
+}
+
+/* Barra de pesquisa */
+.search-container {
+    background-color: var(--primary-color-bold);
+    padding: 0.75rem 0;
+    width: 100%;
+}
+
+.search-content {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.search-aligned-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.search-input-group {
+    display: flex;
+    align-items: center;
+    width: 252px;
+}
+
+.search-input {
+    width: 180px;
+    padding-right: 0.5rem;
+}
+
+.search-btn {
+    white-space: nowrap;
+}
+
+.custom-input {
+    background-color: transparent !important;
+    border: 1px solid white !important;
+    color: white !important;
+    padding: 0.375rem 0.75rem;
+    border-radius: 0.25rem;
+}
+
+.custom-input::placeholder {
+    color: rgba(255, 255, 255, 0.7) !important;
+    opacity: 1;
+}
+
+.custom-input:focus {
+    box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.25);
+    outline: none;
+}
+
+
+/* NAVBAR */
+.navbar {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.navbar-inner-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.navbar-brand img {
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover img {
+    transform: scale(1.05);
+}
+
+.navbar-nav-custom {
+    margin-left: auto;
+    margin-bottom: 0;
+}
+
+.nav-item-custom {
+    margin: 0 0.3rem;
+}
+
+.nav-link-custom {
+    color: var(--primary-color) !important;
+    position: relative;
+    padding: 0.5rem 1rem;
+}
+
+.nav-link-custom.active {
+    font-weight: 600;
+}
+
+.nav-social-icon {
+    font-size: 1.25rem;
+    transition: transform 0.3s ease;
+}
+
+.nav-social-icon:hover {
+    transform: scale(1.2);
+}
+
+.nav-dropdown-custom {
+    color: #0d6efd !important;
+}
+
+.nav-dropdown-custom a {
+    color: #0d6efd !important;
+}
+
+.bg-dropdown{
+    background-color: rgba(0, 0, 0, 0.127);
+}
+
+/* CARROSSEL */
+
+/* Caso queira reativar os indicadores */
+/* .carousel-indicators button {
+    width: 20px !important;
+    height: 20px !important;
+    border-radius: 50% !important;
+    margin: 0 5px;
+    border: 1px solid brown;
+    background-color: transparent;
+}
+
+.carousel-indicators button.active {
+    background-color: var(--secondary-color);
+}
+
+.carousel-indicators {
+    bottom: 5px;
+} */
+
+.carousel-inner {
+    max-height: 550px;
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    max-height: 550px;
+    object-fit: contain;
+    margin: 0 auto;
+}
+
+/* CARDS */
+.section-card-container {
+    background-image: url(assets/image/PNGs/PREFEITURA\ DE\ IPIRÁ\ -\ Site-04.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.card-img-custom {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.card {
+    background-color: transparent;
+    border: none;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.w-13 {
+    width: 13rem !important;
+}
+
+/*  Ação social */
+.responsive-hero-image {
+    height: 60vh !important;
+}
+
+/* Notícias */
+
+.text-overlay {
+    color: var(--primary-color-bold) !important;
+}
+
+/* Serviços */
+.card-service { 
+    transition: transform 0.3s ease;
+}
+
+.card-service:hover {
+    transform: translateY(-5px);
+
+}
+
+/* FOOTER */
+.footer-link {
+    transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+    color: var(--white);
+    text-decoration: underline;
+}
+
+.footer-container {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.container-fluid.footer-wrapper {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+@media (max-width: 991.98px) {
+
+    /* Barra de pesquisa */
+    .search-aligned-container {
+        justify-content: flex-end;
+    }
+
+    .search-input-group {
+        width: 100%;
+        max-width: 252px;
+    }
+
+    .search-input {
+        flex-grow: 1;
+        min-width: 0;
+    }
+
+    /* Navbar */
+    .navbar-nav-custom {
+        width: 100%;
+        text-align: start;
+    }
+
+    .nav-item-custom {
+        padding: 8px 0;
+    }
+
+    .nav-link-custom {
+        padding: 0.5rem 0;
+    }
+
+    .nav-social-icon {
+        margin-right: 1rem;
+    }
+
+    .navbar-collapse {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--black);
+        z-index: 1000;
+        padding: 15px;
+    }
+
+    .navbar-nav {
+        width: 100%;
+        text-align: start;
+    }
+
+    .nav-item {
+        padding: 8px 0;
+    }
+
+    .navbar-toggler {
+        order: 1;
+    }
+
+
+    /* Carossel Indicadores caso queira reativar */
+    /* .carousel-indicators button {
+        width: 10px !important;
+        height: 10px !important;
+    }
+
+    .carousel-indicators {
+        bottom: -20px;
+    } */
+
+    /* Cards */
+
+    .section-card-container {
+        background-image: url(assets/image/PNGs/PREFEITURA\ DE\ IPIRÁ\ -\ Site-04.png);
+        background-repeat: no-repeat;
+        background-size: 90% 118%;
+        background-position: center center;
+
+    }
+
+    .card-img-custom {
+        width: 90%;
+        height: 200px;
+        object-fit: cover;
+        justify-content: center;
+    }
+
+    /* Ação social */
+    .responsive-hero-image {
+        height: 20vh !important;
+    }
+
+    /* Footer */
+    .footer-column {
+        margin-bottom: 2rem;
+        text-align: center !important;
+    }
+
+    .footer-logo {
+        margin-bottom: 1.5rem;
+    }
+
+    .footer-wrapper .footer-container {
+        padding: 15px;
+    }
+
+    .footer-wrapper .row>div {
+        text-align: left !important;
+    }
+
+    .footer-wrapper .text-center.text-md-start {
+        text-align: left !important;
+    }
+
+    .footer-wrapper .align-items-center {
+        align-items: flex-start !important;
+    }
+
+    .footer-wrapper .justify-content-center {
+        justify-content: flex-start !important;
+    }
+
+    .footer-wrapper .mx-auto {
+        margin-left: 0 !important;
+        width: 100% !important;
+    }
+
+    .footer-wrapper .text-center.text-md-end {
+        text-align: left !important;
+    }
+
+    .footer-wrapper img {
+        margin-right: auto;
+        margin-left: 0;
+    }
+}
+
