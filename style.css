@@ -81,7 +81,7 @@
 }
 
 .navbar-brand img {
-    height: 50px;
+    height: 70px;
     transition: transform 0.3s ease;
 }
 
@@ -126,28 +126,8 @@
 }
 
 .bg-dropdown {
-    background-color: rgba(0, 0, 0, 0.127);
+    background-color: rgba(255, 255, 255, 0.959);
 }
-
-/* CARROSSEL */
-
-/* Caso queira reativar os indicadores */
-/* .carousel-indicators button {
-    width: 20px !important;
-    height: 20px !important;
-    border-radius: 50% !important;
-    margin: 0 5px;
-    border: 1px solid brown;
-    background-color: transparent;
-}
-
-.carousel-indicators button.active {
-    background-color: var(--secondary-color);
-}
-
-.carousel-indicators {
-    bottom: 5px;
-} */
 
 .carousel-inner {
     max-height: 550px;
@@ -164,35 +144,66 @@
     margin: 0 auto;
 }
 
-/* CARDS */
-.section-card-container {
-    background-image: url(assets/image/PNGs/PREFEITURA\ DE\ IPIRÁ\ -\ Site-04.png);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    padding: 0px 0;
+
+/*  Carrosel  */
+
+body {
+    overflow-x: hidden;
+    /* Remove a barra de rolagem horizontal */
 }
 
-.cards-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    /* 4 colunas no desktop */
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
+.carousel-container {
+    position: relative;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-.card-custom {
-    background: transparent;
-    border: none;
-    transition: transform 0.3s ease;
-}
-
-.card-custom img {
+/* 
+.carousel-inner img {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 4px;
+    height: 500px;
+    object-fit: contain;
+} */
+
+.carousel-inner {
+    max-height: 550px;
+    /* Altura máxima para telas grandes */
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    max-height: 550px;
+    /* Altura máxima padrão */
+    object-fit: contain;
+    margin: 0 auto;
+}
+
+
+.custom-bg {
+    /* background-color: #0d6efd; */
+    background-image: url(assets/image/PNGs/PREFEITURA\ DE\ IPIRÁ\ -\ Site-04.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100%;
+    width: 55%;
+    position: absolute;
+    top: 50%;
+    right: -3%;
+    transform: translateY(-50%);
+    z-index: 2;
+    padding: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /*  Ação social */
@@ -201,9 +212,24 @@
 }
 
 /* Notícias */
+.title-m{
+   margin-left: 120px; 
+}
 
 .text-overlay {
     color: var(--primary-color-bold) !important;
+}
+
+.a-link {
+    text-decoration: none;
+}
+
+.a-link:hover {
+    text-decoration: underline;
+}
+
+.rounded-notices{
+    border-radius: 20px;
 }
 
 /* Serviços */
@@ -213,7 +239,6 @@
 
 .card-service:hover {
     transform: translateY(-5px);
-
 }
 
 /* FOOTER */
@@ -247,7 +272,7 @@
     .search-input-group {
         width: 100%;
         max-width: 252px;
-        padding: 0px 10px ;
+        padding: 0px 10px;
     }
 
     .search-input {
@@ -296,35 +321,31 @@
         order: 1;
     }
 
-
-    /* Carossel Indicadores caso queira reativar */
-    /* .carousel-indicators button {
-        width: 10px !important;
-        height: 10px !important;
+    /* teste */
+    .carousel-container {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .carousel-indicators {
-        bottom: -20px;
-    } */
-
-    /* Cards */
-
-    .section-card-container {
-        background-size: 100% 120%;
-        background-position: center;
-        padding: 30px 0;
-        margin: 40px 0px;
+    .carousel-inner {
+        max-height: 400px;
     }
 
-    .cards-grid {
-        grid-template-columns: repeat(2, 1fr);
-        /* 2 colunas em mobile/tablet */
-        gap: 15px;
+    .carousel-item img {
+        max-height: 350px;
+        content: url(assets/image/PNGs/carrosel.png);
     }
 
-    .card-custom img {
-        height: 150px;
-        /* Altura menor para mobile */
+
+    .custom-bg {
+        position: static;
+        width: 100%;
+        transform: none;
+        text-align: center;
+        z-index: 0;
+        min-height: 400px;
+        padding: 40px;
+        font-size: 1.5rem;
     }
 
     /* Ação social */
